@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-calculator
+  labels:
+    app: grpc-calculator
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: grpc-calculator
+  template:
+    metadata:
+      labels:
+        app: grpc-calculator
+    spec:
+      containers:
+        - name: grpc-calculator
+          image: quay.io/vndube/grpc-calculator-svc
+

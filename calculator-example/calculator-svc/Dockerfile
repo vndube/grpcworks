@@ -1,8 +1,9 @@
 FROM openjdk:11-jre-slim
+#FROM ubi8/openjdk-11
 RUN mkdir /app
 WORKDIR /app
 
-ADD ./build/libs/grpc-server-svc-1.0.0.jar /app/app.jar
+ADD ./build/libs/calculator-service.jar  /app/app.jar
 
-EXPOSE 8001
+EXPOSE 6565
 ENTRYPOINT ["java", "-jar", "app.jar"]

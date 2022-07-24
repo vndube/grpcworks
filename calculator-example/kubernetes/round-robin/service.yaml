@@ -1,11 +1,30 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: grpc-server-service
+  labels:
+    app: grpc-calculator
+  name: grpc-calculator-service
 spec:
   clusterIP: None
   selector:
-    app: grpc-server
+    app: grpc-calculator
   ports:
-    - port: 80
-      targetPort: 8001
+  - name: 6565-tcp
+    port: 80
+    targetPort: 6565
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: grpc-aggregator
+  name: grpc-aggregator-service
+spec:
+  type: ClusterIP
+  selector:
+    app: grpc-aggregator
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080

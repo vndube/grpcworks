@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-aggregator
+  labels:
+    app: grpc-aggregator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-aggregator
+  template:
+    metadata:
+      labels:
+        app: grpc-aggregator
+    spec:
+      containers:
+        - name: grpc-aggregator
+          image: quay.io/vndube/grpc-aggregator-svc
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          env:
+            - name: grpc.client.calculator-service.address
+              value: grpc-calculator-service:80

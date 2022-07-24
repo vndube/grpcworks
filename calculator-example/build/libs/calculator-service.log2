@@ -1,0 +1,14 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.1.RELEASE)
+
+2022-07-22 13:00:51.691  INFO 7289 --- [           main] c.v.grpc.CalculatorServiceApplication    : Starting CalculatorServiceApplication v1.0-SNAPSHOT on workstation.lab.example.com with PID 7289 (/home/student/grp-practice/grpcworks/calculator-example/build/libs/calculator-service.jar started by student in /home/student/grp-practice/grpcworks/calculator-example/build/libs)
+2022-07-22 13:00:51.694  INFO 7289 --- [           main] c.v.grpc.CalculatorServiceApplication    : No active profile set, falling back to default profiles: default
+2022-07-22 13:00:52.736  INFO 7289 --- [           main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: calculator.CalculatorService, bean: calculatorService, class: com.vinsguru.grpc.service.CalculatorService
+2022-07-22 13:00:52.831  INFO 7289 --- [           main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 6565
+2022-07-22 13:00:52.841  INFO 7289 --- [           main] c.v.grpc.CalculatorServiceApplication    : Started CalculatorServiceApplication in 1.676 seconds (JVM running for 2.236)

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: grpc-aggregator
+  name: grpc-aggregator-service
+spec:
+  type: ClusterIP
+  selector:
+    app: grpc-aggregator
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
