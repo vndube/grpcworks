@@ -22,3 +22,6 @@ do
   done
   START=$(($(date "+%s%N")/1000000))
 done
+
+#cat <<file_name>> | bash -s 20 <<curl_statement>>
+
