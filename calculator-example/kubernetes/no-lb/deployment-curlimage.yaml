@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: curlimage
+  labels:
+    app: curlimage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: curlimage
+  template:
+    metadata:
+      labels:
+        app: curlimage
+    spec:
+      containers:
+        - name: curlimage
+          image: quay.io/vndube/curlimages
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+

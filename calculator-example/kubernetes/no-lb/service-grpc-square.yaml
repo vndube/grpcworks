@@ -5,8 +5,8 @@ metadata:
     app: grpc-square
   name: grpc-square-service
 spec:
-  type: ClusterIP
-#  clusterIP: None
+#  type: ClusterIP
+  clusterIP: None
   selector:
     app: grpc-square
   ports:
