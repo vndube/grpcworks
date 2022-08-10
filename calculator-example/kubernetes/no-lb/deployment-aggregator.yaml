@@ -23,3 +23,7 @@ spec:
           env:
             - name: grpc.client.calculator-service.address
               value: grpc-calculator-service:80
+            - name: grpc.client.square.address
+              value: grpc-square-service:80
+            - name: rest.square.service.endpoint
+              value: rest-square-service:80

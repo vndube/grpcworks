@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-square
+  labels:
+    app: grpc-square
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: grpc-square
+  template:
+    metadata:
+      labels:
+        app: grpc-square
+    spec:
+      containers:
+        - name: grpc-square
+          image: quay.io/vndube/grpc-square
+

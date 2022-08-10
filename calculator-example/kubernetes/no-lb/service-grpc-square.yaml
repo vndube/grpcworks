@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: grpc-square
+  name: grpc-square-service
+spec:
+  type: ClusterIP
+#  clusterIP: None
+  selector:
+    app: grpc-square
+  ports:
+  - name: 6565-tcp
+    port: 80
+    targetPort: 6565
+

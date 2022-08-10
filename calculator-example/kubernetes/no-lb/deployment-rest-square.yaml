@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-square
+  labels:
+    app: rest-square
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rest-square
+  template:
+    metadata:
+      labels:
+        app: rest-square
+    spec:
+      containers:
+        - name: rest-square
+          image: quay.io/vndube/rest-square
+
